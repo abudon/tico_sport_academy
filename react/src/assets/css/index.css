@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* UNIVERSAL */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+:root{
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+
+}
+/* END OF UNIVERSAL */
+
+/* SIGN UP AND SIGN IN */
+.login_cover{
+    background-image: url('../images/login.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+}
+
+.login_form{
+    background-color: transparent;
+    padding: 1rem 3.5rem;
+    border-radius: 1.2rem;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(50px);
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 70%;
+}
+
+.login_form h1{
+    font-family: "Poppins ExtraBold", sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
+
+}
+
+.login_form input,.dob {
+    width: 100%;
+    padding: 1rem;
+    border-color: #fff ;
+    border-width: 2px;
+    border-radius: 0.6rem;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: background-color 0.3s ease-in-out;
+    height: 2.5rem;
+}
+
+.login_form p{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Poppins SemiBold",sans-serif;
+}
+
+.login_form input::placeholder{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Poppins SemiBold",sans-serif;
+}
+.reg{
+    font-family: "Poppins SemiBold", sans-serif;
+}
+.copyright{
+    font-family: "Poppins SemiBold", sans-serif;
+    color: #fff;
+    position: absolute;
+    bottom: 1rem;
+    right: 3rem;
+}
+/* END OF SIGN UP AND SIGN IN */
+
+
+
+/* NAVBAR AREA  */
+.menu_items{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+}
+.menu_items a {
+    display: block;
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+.menu_items button {
+    color: inherit;
+    font-size: inherit;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+}
+.menu_items a,
+.menu_items button {
+    text-align: left;
+    padding: 0.7rem 1rem;
+    transition: opacity 4s ease-in-out;
+}
+
+.menu_items a:hover,
+.menu_items button:hover {
+    color: deepskyblue;
+    transition: opacity 1s ease-in-out;
+}
+.menu_items a:hover::after,
+.menu_items button:hover::after{
+    content: "";
+    width: 50%;
+    height: 2px;
+    background:deepskyblue ;
+    position: absolute;
+    bottom: -4px;
+    right: 20px;
+}
+
+.menu_items a:hover::before,
+.menu_items button:hover::before{
+    content: "";
+    width: 50%;
+    height: 2px;
+    background:deepskyblue ;
+    position: absolute;
+    top: -4px;
+    left: 10px;
+
+}
+.dropdown {
+    position: absolute;
+    right: auto;
+    left: auto;
+    top:auto;
+    box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),  0 4px 6px -2px rgba(71, 63, 79, 0.16);
+    font-size: 0.875rem;
+    z-index: 9999;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    list-style: none;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 0.5rem;
+    display: none;
+    backdrop-filter: blur(100px);
+
+}
+.show{
+    display: block;
+    transition: 4s ease-out;
+}
+.dropdown-submenu{
+    left: 1rem;
+}
+
+
+/* Search Bar */
+
+.searchInputs {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    padding: 1rem;
+    border-color: #fff ;
+    border-width: 2px;
+    border-radius: 0.6rem;
+    margin-bottom: 1rem;
+    height: 2.5rem;
+    justify-content: center;
+}
+
+.search input {
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: background-color 0.3s ease-in-out;
+    width: 80%;
+
+}
+
+
+.search input:focus {
+    outline: none;
+}
+.search input::placeholder {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Poppins SemiBold",sans-serif;
+}
+
+.dataResult {
+    margin-top: 5px;
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.dataResult::-webkit-scrollbar {
+    display: none;
+}
+
+.dataResult .dataItem {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.dataItem p {
+    margin-left: 10px;
+}
+.search a {
+    text-decoration: none;
+}
+
+.search a:hover {
+    background-color: lightgrey;
+}
+
+#clearBtn {
+    cursor: pointer;
+}
+
+
+/* END OF NAVBAR AREA  */
+
+
+
+
+
+
+
+
+
+@media screen and (max-device-width: 918px){
+
+}
